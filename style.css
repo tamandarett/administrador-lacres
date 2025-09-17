@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-    color: #007bff; /* Azul para o título, similar ao seu exemplo */
+    color: #e50914; /* Vermelho principal para o título */
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -69,12 +69,12 @@ button {
 }
 
 button[type="submit"] {
-    background-color: #007bff; /* Cor principal, azul */
+    background-color: #e50914; /* Cor principal, vermelho */
     color: #fff;
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #a0070e; /* Vermelho mais escuro para o hover */
 }
 
 .footer {
