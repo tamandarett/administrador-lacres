@@ -30,19 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const loja = document.getElementById('loja').value;
         const operador = document.getElementById('operador').value;
 
-        // Resetar a cor e espessura da borda dos campos
+        // Resetar a cor dos campos
         lacreInput.style.borderColor = '';
-        lacreInput.style.borderWidth = ''; // Resetar a espessura também
         confirmarLacreInput.style.borderColor = '';
-        confirmarLacreInput.style.borderWidth = ''; // Resetar a espessura também
 
         // Validação dos campos de lacre
         if (lacre !== confirmarLacre) {
             alert('Atenção: Os números de lacre não são iguais. Por favor, verifique.');
             lacreInput.style.borderColor = 'red';
-            lacreInput.style.borderWidth = '2px'; // Aumenta a espessura da borda
             confirmarLacreInput.style.borderColor = 'red';
-            confirmarLacreInput.style.borderWidth = '2px'; // Aumenta a espessura da borda
             return;
         }
 
@@ -66,3 +62,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 // Se der certo, esconde o formulário e mostra a mensagem de sucesso
+                form.style.display = 'none';
+                successMessageDiv.style.display = 'block';
+            } else {
+                alert('Erro ao enviar os dados. Tente novamente.');
+            }
+        } catch (error) {
+            console.error('Erro de conexão:', error);
+            alert('Não foi possível conectar. Verifique sua internet.');
+        }
+    });
+
+    // Evento do botão "Novo Registro"
+    novoRegistroBtn.addEventListener('click', () => {
+        form.style.display = 'block';
+        successMessageDiv.style.display = 'none';
+        form.reset();
+        lacreInput.style.borderColor = '';
+        confirmarLacreInput.style.borderColor = '';
+    });
+});
