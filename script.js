@@ -1,8 +1,8 @@
 document.getElementById('lacreForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // SUBSTITUA ESTA URL PELA SUA URL DE IMPLANTAÇÃO DO GOOGLE APPS SCRIPT
-    const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbxCcxzRKHnbCvPa4K1I4J-3k75V7u3IqjJgmO1UdAEWKWKaa-oDuxbqqOONNKzs3gxC/exec';
+    // URL da sua nova implantação do Google Apps Script
+    const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbzNEaGuuffVK7oD5kcyJDEcFxWCM2k_6JrbRWkfFQ0_VwKThTqosy45F84-TbVrmyhRlg/exec';
     
     const lacre = document.getElementById('lacre').value;
     const loja = document.getElementById('loja').value;
